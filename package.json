@@ -1,0 +1,39 @@
+{
+  "name": "twitter-harvest",
+  "version": "0.0.0",
+  "description": "A simple continous harvester for twitter",
+  "homepage": "http://bitem.hesge.ch/resource/twitter-harvest",
+  "repository": "gaudinat/twitter-harvest",
+  "author": {
+    "name": "Arnaud Gaudinat",
+    "email": "arnaud.gaudinat@hesge.ch",
+    "url": "http://bitem.hesge.ch/people/arnaud-gaudinat"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "twitter",
+    "harvester",
+    "forever"
+  ],
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^0.4.5",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-babel": "^5.1.0",
+    "babel-core": "^5.5.0",
+    "isparta": "^3.0.3"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
