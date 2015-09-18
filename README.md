@@ -24,9 +24,9 @@ MIT © [Arnaud Gaudinat](http://bitem.hesge.ch/people/arnaud-gaudinat)
 
 [npm-image]: https://badge.fury.io/js/twitter-harvest.svg
 [npm-url]: https://npmjs.org/package/twitter-harvest
-[travis-image]: https://travis-ci.org/gaudinat/twitter-harvest.svg?branch=master
-[travis-url]: https://travis-ci.org/gaudinat/twitter-harvest
-[daviddm-image]: https://david-dm.org/gaudinat/twitter-harvest.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/gaudinat/twitter-harvest
-[coveralls-image]: https://coveralls.io/repos/gaudinat/twitter-harvest/badge.svg
-[coveralls-url]: https://coveralls.io/r/gaudinat/twitter-harvest
+[travis-image]: https://travis-ci.org/HESGE/twitter-harvest.svg?branch=master
+[travis-url]: https://travis-ci.org/HESGE/twitter-harvest
+[daviddm-image]: https://david-dm.org/HESGE/twitter-harvest.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/HESGE/twitter-harvest
+[coveralls-image]: https://coveralls.io/repos/HESGE/twitter-harvest/badge.svg
+[coveralls-url]: https://coveralls.io/r/HESGE/twitter-harvest
