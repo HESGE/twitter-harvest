@@ -1,9 +1,9 @@
 {
   "name": "twitter-harvest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple continous harvester for twitter",
   "homepage": "http://bitem.hesge.ch/resource/twitter-harvest",
-  "repository": "gaudinat/twitter-harvest",
+  "repository": "HESGE/twitter-harvest",
   "author": {
     "name": "Arnaud Gaudinat",
     "email": "arnaud.gaudinat@hesge.ch",
