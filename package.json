@@ -18,6 +18,9 @@
     "harvester",
     "forever"
   ],
+  "dependencies" :{
+    "bunyan" : ">=1.5.1"
+  },
   "devDependencies": {
     "gulp": "^3.6.0",
     "gulp-eslint": "^1.0.0",
@@ -32,6 +35,7 @@
     "isparta": "^3.0.3"
   },
   "scripts": {
+    "start": "node twitter-harvest.js",
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
