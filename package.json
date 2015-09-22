@@ -1,6 +1,6 @@
 {
   "name": "twitter-harvest",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple continous harvester for twitter",
   "homepage": "http://bitem.hesge.ch/resource/twitter-harvest",
   "repository": "HESGE/twitter-harvest",

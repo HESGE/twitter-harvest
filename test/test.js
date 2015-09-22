@@ -1,11 +1,11 @@
 var assert = require('assert');
-var twitterHarvest = require('../lib/twitter-harvest.js');
+var harvest = require('../lib/twitter-harvest.js');
 
-describe('twitterHarvest', function () {
+describe('twitter-harvest', function () {
   describe('init', function () {
-    it('should have unit test!', function () {
-      twitterHarvest.init(1);
-      assert(true, true);
+    it('init should load correctly the cfg file', function () {
+      harvest.init(1);
+      assert(harvest.cfg().keep_source, true);
     });
   });
 });
