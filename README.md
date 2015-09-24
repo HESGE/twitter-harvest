@@ -122,7 +122,7 @@ more API twitter doc https://dev.twitter.com/streaming/overview/request-paramete
 * add more tests
 * add extra option to add extra info in the output(from agents)
 * add realtime writing to search engine (already done somewhere for Solr) or other db
-* add
+* add other api interface (not only the streaming API)
 * improve robustness
 
 
