@@ -1,0 +1,15 @@
+{
+  "type_doc"            : "twitter",
+  "enable"              : false,
+  "type_filter"         : "track",
+  "type_api"            : "stream",
+  "name"                : "keywords-geneva",
+  "filter"              : {
+    "track"             : "genève,geneva,genebra,genevra,genf"
+  },
+  "stream"              : "filter",
+  "consumer_key"        : "...",
+  "consumer_secret"     : "...",
+  "access_token_key"    : "...",
+  "access_token_secret" : "..."
+}

@@ -1,5 +1,6 @@
 node_modules
 coverage
 dist
-cfg
+cfg/agents/agent-*.*
+data
 secrets.tar

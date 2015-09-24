@@ -1,0 +1,15 @@
+{
+  "type_doc"            : "twitter",
+  "enable"              : false,
+  "type_filter"         : "locations",
+  "type_api"            : "stream",
+  "name"                : "location-geneva",
+  "filter"              : {
+    "locations"  : "5.77,45.85,7.15,46.80"
+  },
+  "stream"              : "filter",
+  "consumer_key"        : "...",
+  "consumer_secret"     : "...",
+  "access_token_key"    : "...",
+  "access_token_secret" : "..."
+}

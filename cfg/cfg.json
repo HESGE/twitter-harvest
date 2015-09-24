@@ -1,0 +1,9 @@
+{
+  "agents_dir"    : "cfg/agents/",
+  "keep_source"   : true,
+  "data_dir"      : "./data/",
+
+  "fs_out"        : true,
+  "std_out"       : true,
+  "solr_out"      : true
+}
