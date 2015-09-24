@@ -52,7 +52,8 @@ With forever it is possible to run the task 'forever'. And leave your session.
 
   "fs_out"        : true,
   "std_out"       : true,
-}```
+}
+```
 
 * agents_dir: path where to put the agent file
 * data_dir: path where to write the tweets on the file system
@@ -82,7 +83,8 @@ $ cat cfg/agents/*.json
   "consumer_secret"     : "...",
   "access_token_key"    : "...",
   "access_token_secret" : "..."  
-}```
+}
+```
 
 to capture all the tweets where there is a mention of geneva word for several languages.
 
@@ -102,7 +104,8 @@ to capture all the tweets where there is a mention of geneva word for several la
   "consumer_secret"     : "...",
   "access_token_key"    : "...",
   "access_token_secret" : "..."
-}```
+}
+```
 
 to capture all the tweets which are posted around Geneva area (Switzerland).
 
