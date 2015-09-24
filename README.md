@@ -117,6 +117,12 @@ to capture all the tweets which are posted around Geneva area (Switzerland).
 
 more API twitter doc https://dev.twitter.com/streaming/overview/request-parameters
 
+## test
+
+```sh
+$ gulp
+```
+
 ## to do
 
 * add more tests
