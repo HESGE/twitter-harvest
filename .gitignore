@@ -4,3 +4,4 @@ dist
 cfg/agents/agent-*.*
 data
 secrets.tar
+cfg/my-cfg-private.json

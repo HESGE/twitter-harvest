@@ -1,0 +1,7 @@
+{
+  "mail_service"    : "gmail",
+  "mail_auth_user"  : "username",
+  "mail_auth_path"  : "password",
+  "mail_from"       : "alert_twitter_harvest",
+  "mail_to"         : "name@gmail.com"
+}

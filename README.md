@@ -9,10 +9,11 @@
 [coveralls-url]: https://coveralls.io/r/HESGE/twitter-harvest
 
 # twitter-harvest [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> A simple continous harvester for twitter
+> A simple continuous harvester for twitter
 
-This application is able to capture tweets which are happen around the world. Currently it works only with the Twitter stream API 1.1.
+This application is able to capture tweets which happen around the world. Currently it works only with the Twitter stream API 1.1.
 You have to define or modify the `cfg/cfg.json` and create at least one capture `agent` in `cfg/agents/` directory
+You can active mail alert from a SMTP account like gmail (see Private configuration and the `mail_alert` flag in main configuration)
 If `fs_output` is `true`, the captured tweets are written to the file system with the following convention:
 
 >data_dir/year/month/day/hour-min-sec_tweet-id
@@ -49,6 +50,9 @@ With forever it is possible to run the task 'forever'. And leave your session.
 {
   "agents_dir"    : "cfg/agents/",
   "data_dir"      : "./data/",
+  "private_cfg"   : "./cfg/cfg-private.json",
+
+  "mail_alert"    : false,
 
   "fs_out"        : true,
   "std_out"       : true,
@@ -57,6 +61,8 @@ With forever it is possible to run the task 'forever'. And leave your session.
 
 * agents_dir: path where to put the agent file
 * data_dir: path where to write the tweets on the file system
+* private_cfg: file where private data is stored (such as mail credential)
+* mail_alert: if true enable mail alerting in case of failure
 * fs_out: if true write the twitter data on the file system
 * std_out: if true write the twitter data on the console
 
@@ -117,19 +123,44 @@ to capture all the tweets which are posted around Geneva area (Switzerland).
 
 more API twitter doc https://dev.twitter.com/streaming/overview/request-parameters
 
-## test
+## Private configuration
+
+```json
+{
+  "mail_service"    : "gmail",
+  "mail_auth_user"  : "username",
+  "mail_auth_path"  : "password",
+  "mail_from"       : "alert_twitter_harvest",
+  "mail_to"         : "name@gmail.com"
+}
+```
+
+* mail_service : name of the mail service
+* mail_auth_user : username credential of the mail service
+* mail_auth_path : password credential of the mail service
+* mail_from : who will send the mail
+* mail_to : who want to be alerted
+
+>note : supported mail system is given by nodemailer node module (here is the supported service https://github.com/andris9/nodemailer-wellknown#supported-services), but only gmail was tested
+for gmail, it is possible you have to decrease the security level of your mail account (so don't use a personal account) and to authorize specifically the application by using this url: https://g.co/allowaccess
+
+
+
+## Test
 
 ```sh
 $ gulp
 ```
 
-## to do
+## To do
 
 * add more tests
 * add extra option to add extra info in the output(from agents)
 * add realtime writing to search engine (already done somewhere for Solr) or other db
 * add other api interface (not only the streaming API)
 * improve robustness
+   * mail alert (done)
+   * check json syntax
 
 
 ## License
