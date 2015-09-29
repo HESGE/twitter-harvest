@@ -12,9 +12,9 @@
 > A simple continuous harvester for twitter
 
 This application is able to capture tweets which happen around the world. Currently it works only with the Twitter stream API 1.1.
-You have to define or modify the `cfg/cfg.json` and create at least one capture `agent` in `cfg/agents/` directory
-You can active mail alert from a SMTP account like gmail (see Private configuration and the `mail_alert` flag in main configuration)
-If `fs_output` is `true`, the captured tweets are written to the file system with the following convention:
+* You have to define or modify the `cfg/cfg.json` and create at least one capture `agent` in `cfg/agents/` directory (`enable` to `true`).
+* You can activate mail alert from a SMTP account like gmail (see Private configuration and the `mail_alert` flag in main configuration)
+* If `fs_output` is `true` (default), the captured tweets are written to the file system with the following convention:
 
 >data_dir/year/month/day/hour-min-sec_tweet-id
 
@@ -140,6 +140,8 @@ more API twitter doc https://dev.twitter.com/streaming/overview/request-paramete
 * mail_auth_path : password credential of the mail service
 * mail_from : who will send the mail
 * mail_to : who want to be alerted
+
+One mail is also sent when the system is started, you should received this mail on your mail box if all well configured.
 
 >note : supported mail system is given by nodemailer node module (here is the supported service https://github.com/andris9/nodemailer-wellknown#supported-services), but only gmail was tested
 for gmail, it is possible you have to decrease the security level of your mail account (so don't use a personal account) and to authorize specifically the application by using this url: https://g.co/allowaccess
