@@ -1,0 +1,22 @@
+{
+  "id"          : "/cfg",
+  "type"        : "object",
+  "properties"  : {
+    "agents_dir"  : { "type" : "string"},
+    "keep_source" : { "type" : "boolean"},
+    "data_dir"    : { "type" : "string"},
+    "private_cfg" : { "type" : "string"},
+    "mail_alert"  : { "type" : "boolean"},
+    "fs_out"      : { "type" : "boolean"},
+    "std_out"     : { "type" : "boolean"},
+    "solr_out"    : { "type" : "boolean"}
+  },
+  "required"    : [
+    "agents_dir",
+    "data_dir",
+    "private_cfg",
+    "mail_alert",
+    "fs_out",
+    "std_out"
+  ]
+}

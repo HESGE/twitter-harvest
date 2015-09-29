@@ -1,0 +1,47 @@
+{
+    "id": "/agent",
+    "type": "object",
+    "properties": {
+        "type_doc": {
+            "type": "string"
+        },
+        "enable": {
+            "type": "boolean"
+        },
+        "type_api": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "filter": {
+            "type": "object",
+            "properties": {
+                "track": {
+                    "type": "string"
+                },
+                "locations": {
+                    "type": "string"
+                },
+                "follows": {
+                    "type": "string"
+                }
+            }
+        },
+        "stream": {
+            "type": "string"
+        },
+        "consumer_key": {
+            "type": "string"
+        },
+        "consumer_secret": {
+            "type": "string"
+        },
+        "access_token_key": {
+            "type": "string"
+        },
+        "access_token_secret": {
+            "type": "string"
+        }
+    }
+}

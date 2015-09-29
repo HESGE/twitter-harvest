@@ -1,0 +1,18 @@
+{
+  "id"          : "/cfg-private",
+  "type"        : "object",
+  "properties"  : {
+    "mail_service"    : { "type" : "string"},
+    "mail_auth_user"  : { "type" : "string"},
+    "mail_auth_path"  : { "type" : "string"},
+    "mail_from"       : { "type" : "string"},
+    "mail_to"         : { "type" : "string"}
+  },
+  "required"    : [
+    "mail_service",
+    "mail_auth_user",
+    "mail_auth_user",
+    "mail_from",
+    "mail_to"
+  ]
+}
