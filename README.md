@@ -154,6 +154,18 @@ for gmail, it is possible you have to decrease the security level of your mail a
 $ gulp
 ```
 
+## Notes
+
+Note that currently, we have 3 errors messages when twitter-harvest is launched. This is not important.
+Here are theses Error messages
+
+```sh
+{ [Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+```
+
+
 ## To do
 
 * add more tests
