@@ -172,10 +172,6 @@ Here are theses Error messages
 * add extra option to add extra info in the output(from agents)
 * add realtime writing to search engine (already done somewhere for Solr) or other db
 * add other api interface (not only the streaming API)
-* improve robustness
-   * mail alert (done)
-   * check json syntax
-
 
 ## License
 
