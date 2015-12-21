@@ -2,11 +2,12 @@
   "agents_dir"    : "cfg/agents/",
   "keep_source"   : true,
   "data_dir"      : "./data/",
-  "private_cfg"   : "./cfg/cfg-private.json",
+  "private_cfg"   : "./cfg/my-cfg-private.json",
 
   "mail_alert"    : false,
 
   "fs_out"        : true,
   "std_out"       : false,
-  "solr_out"      : true
+  "solr_out"      : true,
+  "todo_out"      : true
 }

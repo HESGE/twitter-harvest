@@ -137,23 +137,27 @@ describe('fs-interface', function () {
   var fsInterface = new FsInterface(dir);
 
   describe('new', function () {
-    it('should create a data dir if doesn\'t exist' , function () {
+    it('should create a data dir if doesn\'t exist' , function (done) {
 
       try {
-        var stat = fs.lstatSync(dir);
+        // test also the todo dir
+        var stat = fs.lstatSync(dir+'/TODO');
       }
       catch (err){
         should.not.exist(err);
       }
+      done();
     });
   });
 
   // "Fri Feb 20 07:44:25 +0000 2015"
-  describe('convertDateToDir', function () {
+  describe('convertDateToDirName', function () {
     it('should convert date to path', function (done) {
 
-        var datePath = fsInterface.convertDateToDir( tweetSet.created_at);
-        datePath.should.equal('2015/2/20/8-44-25_');
+        var datePath = fsInterface.convertDateToDirName( tweetSet.created_at ,'/');
+        datePath.should.equal('2015/02/20/08-44-25_');
+        var datePath2 = fsInterface.convertDateToDirName( tweetSet.created_at ,'_');
+        datePath2.should.equal('2015_02_20_08-44-25_');
         done();
 
 
@@ -163,20 +167,22 @@ describe('fs-interface', function () {
   describe('write', function () {
     it('should write a tweet on the file system', function (done) {
 
+        fsInterface.write(tweetSet, true ,function (err1) {
 
-        fsInterface.write(tweetSet, function (err1) {
           if (err1) {
             should.not.exist(err1);
+
           }
           else {
             try {
               var stat = fs.lstatSync(dir + fsInterface.pathDate + tweetSet.id);
             }
             catch (err2) {
+
               should.not.exist(err2);
             }
+            done();
           }
-          done();
         });
 
     });
