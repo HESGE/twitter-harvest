@@ -8,6 +8,5 @@
 
   "fs_out"        : true,
   "std_out"       : false,
-  "solr_out"      : true,
   "todo_out"      : true
 }

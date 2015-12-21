@@ -14,7 +14,9 @@
 This application is able to capture tweets which happen around the world. Currently it works only with the Twitter stream API 1.1.
 * You have to define or modify the `cfg/cfg.json` and create at least one capture `agent` in `cfg/agents/` directory (`enable` to `true`).
 * You can activate mail alert from a SMTP account like gmail (see Private configuration and the `mail_alert` flag in main configuration)
-* If `fs_output` is `true` (default), the captured tweets are written to the file system with the following convention:
+* If `fs_out` is `true` (default), the captured tweets are written to the file system with the following convention:
+* If `todo_out` is `true` (should be false by default),  a kind of queue is created (directory 'data/TODO') where filenames to consume by an external process. This allow to write the tweets to any db
+    * Note, that the number of files by directory is limited (depend of the OS), the filenames need to be consumed by the external process regularly to avoid issues
 
 >data_dir/year/month/day/hour-min-sec_tweet-id
 
@@ -56,6 +58,7 @@ With forever it is possible to run the task 'forever'. And leave your session.
 
   "fs_out"        : true,
   "std_out"       : true,
+  "todo_out"      : true  
 }
 ```
 
@@ -65,6 +68,7 @@ With forever it is possible to run the task 'forever'. And leave your session.
 * mail_alert: if true enable mail alerting in case of failure
 * fs_out: if true write the twitter data on the file system
 * std_out: if true write the twitter data on the console
+* todo_out: if true write the json filename in the 'data/TODO' dir (to be consumed by an other process to BD (mysql, ...)
 
 ## Agents configuration
 
@@ -176,3 +180,12 @@ Here are theses Error messages
 ## License
 
 MIT © [Arnaud Gaudinat](http://bitem.hesge.ch/people/arnaud-gaudinat)
+
+
+## Change log
+
+* 0.3.3:
+  * add the TODO option and directory to allow writing in DB
+  * add 2 digits on filenames and JSON extension
+* 0.3.2:
+  * add JSONschema validation

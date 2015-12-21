@@ -175,7 +175,7 @@ describe('fs-interface', function () {
           }
           else {
             try {
-              var stat = fs.lstatSync(dir + fsInterface.pathDate + tweetSet.id);
+              var stat = fs.lstatSync(dir + fsInterface.pathDate + tweetSet.id + '.json');
             }
             catch (err2) {
 
