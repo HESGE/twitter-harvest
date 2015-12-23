@@ -174,7 +174,6 @@ Here are theses Error messages
 
 * add more tests
 * add extra option to add extra info in the output(from agents)
-* add realtime writing to search engine (already done somewhere for Solr) or other db
 * add other api interface (not only the streaming API)
 
 ## License
@@ -184,6 +183,8 @@ MIT © [Arnaud Gaudinat](http://bitem.hesge.ch/people/arnaud-gaudinat)
 
 ## Change log
 
+* 0.3.4:
+  * chat the node twitter lib with Twit (for better handling of error)
 * 0.3.3:
   * add the TODO option and directory to allow writing in DB
   * add 2 digits on filenames and JSON extension
